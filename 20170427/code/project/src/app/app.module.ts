@@ -4,15 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MaterialModule } from "@angular/material";
+import { TabGridComponent } from './tab-grid/tab-grid.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TabGridComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

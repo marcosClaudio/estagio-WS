@@ -7,3 +7,5 @@
     * Comecei a por em pratica meu conhecimento e estudos em torno do Angular 2 e angular/material.
     * Comecei a configurar o ambiente para rodar o angular2.
 ---
+# Impedimentos:
+    *Nenhum ate o momento.

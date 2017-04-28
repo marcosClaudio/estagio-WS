@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MaterialModule } from '@angular/material';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-root',
