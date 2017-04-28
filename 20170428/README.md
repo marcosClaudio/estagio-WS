@@ -4,9 +4,9 @@
 
 ## Sao eles:
 ### Toolbar  
-		-Criou-se o toolbar. 
-		-mudou-se suas cores com scss, definindo a cor "primary" em arquivo criado em assets
-		-No arquivo assets/custom-theme.scss (criado manualmente por mim) defini a propriedade " @import '~@angular/material/prebuilt-themes/ 			deeppurple-amber.css'; " que importa um tema pre-criado padrao do material design do angular2.
+		* Criou-se o toolbar. 
+		* Mudou-se suas cores com scss, definindo a cor "primary" em arquivo criado em assets.
+        *No arquivo assets/custom-theme.scss (criado manualmente por mim) definiu-se a propriedade " @import  '~@angular/material/prebuilt-themes/deeppurple-amber.css';" que ira importar um tema pre-criado  padrao do material 2 design do angular 2.
 
 ### Button 
 	  * Dentro de toolbar foi criado um button.
