@@ -6,11 +6,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from "@angular/material";
+import { TabGridComponent } from './tab-grid/tab-grid.component';
+import { CardsComponent } from './cards/cards.component';
+import { Cards2Component } from './cards2/cards2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+    TabGridComponent,
+    CardsComponent,
+    Cards2Component
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,9 @@ import { MaterialModule } from "@angular/material";
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    
+    TabGridComponent,
+    CardsComponent,
+    Cards2Component
   ]
 })
 export class AppModule { }

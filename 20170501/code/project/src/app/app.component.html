@@ -37,3 +37,35 @@
     </button>
   </div>
 </md-sidenav-container>
+
+    <md-card>
+      <md-tab-group>
+        <md-tab label="Earth">
+          <app-cards></app-cards>
+        </md-tab>
+        <md-tab label="Fire">
+          <app-cards2></app-cards2>
+        </md-tab>
+      </md-tab-group>
+    </md-card>
+
+    <md-card>
+      <app-tab-grid></app-tab-grid>
+      <section>
+        <label>Progress</label>
+        <md-slider class="example-margin" [(ngModel)]="value"></md-slider>
+      </section>
+
+      <md-progress-bar 
+      class="example-margin" 
+      [value]="value"
+      [mode]="mode"></md-progress-bar>
+    </md-card>
+
+    <md-card>
+      <md-chip-list>
+        <md-chip color="primary" selected="true">A</md-chip>
+        <md-chip color="accent" selected="true">B</md-chip>
+        <md-chip color="warn" selected="true">C</md-chip>
+      </md-chip-list>
+    </md-card>
