@@ -1,0 +1,12 @@
+    <ul>
+      <li *ngFor="let item of items | paginate: { itemsPerPage: 4, currentPage: p }"> {{item.title}}</li>
+    </ul>
+
+    <md-list>
+        
+        <md-list-item *ngFor="let item of items | paginate: { itemsPerPage: 4, currentPage: p }">
+             {{item.title}} <i class="material-icons" style="margin-left: 50px">done</i>
+        </md-list-item>
+        
+    </md-list>   
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>

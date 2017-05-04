@@ -1,0 +1,75 @@
+<md-toolbar color="primary">
+  <button md-mini-fab style="background-color:transparent" [mdMenuTriggerFor]="menu">
+    <i class="material-icons">reorder</i>
+  </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item>
+      <i class="material-icons">perm_identity</i>
+      <span>Posts</span>
+    </button>
+
+    <button md-menu-item>
+      <i class="material-icons">power_settings_new</i>
+      <span>Users</span>
+    </button>
+  </md-menu>
+  <h2 style="margin-left: 10px">
+  Gerenciador
+  </h2>
+</md-toolbar>
+
+<md-toolbar style="background-color:blueviolet">
+</md-toolbar>
+
+
+<!-- -------------------------------------------------------------------------- -->
+<h1 style="margin-left: 20px">
+  {{title}} 
+</h1>
+
+<md-sidenav-container>
+  <md-sidenav #sidenav>
+    Hi
+  </md-sidenav>
+   <div class="example-sidenav-content">
+    <button md-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+  </div>
+</md-sidenav-container>
+
+    <md-card>
+      <md-tab-group>
+        <md-tab label="Earth">
+          <app-cards></app-cards>
+        </md-tab>
+        <md-tab label="Fire">
+          <app-cards2></app-cards2>
+        </md-tab>
+      </md-tab-group>
+    </md-card>
+
+    <md-card>
+      <app-tab-grid></app-tab-grid>
+      <section>
+        <label>Progress</label>
+        <md-slider class="example-margin" [(ngModel)]="value"></md-slider>
+      </section>
+
+      <md-progress-bar 
+      class="example-margin" 
+      [value]="value"
+      [mode]="mode"></md-progress-bar>
+    </md-card>
+
+    <md-card>
+      <md-chip-list>
+        <md-chip color="primary" selected="true">A</md-chip>
+        <md-chip color="accent" selected="true">B</md-chip>
+        <md-chip color="warn" selected="true">C</md-chip>
+      </md-chip-list>
+    </md-card>
+
+    <md-card>
+    <app-auto-complete></app-auto-complete>
+    </md-card>
