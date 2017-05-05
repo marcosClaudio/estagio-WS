@@ -1,0 +1,20 @@
+    <md-card class="card">
+      <h1>Users</h1>
+    </md-card>
+    
+    <md-card class="card">
+    <md-list>
+        <md-list-item *ngFor="let users of item | paginate: { itemsPerPage: 20, currentPage: p }">
+            <a md-mini-fab target="_blank" href="https://jsonplaceholder.typicode.com/users/{{users.id}}"><i class="material-icons">visibility</i></a>
+           <h2 style="color: white">awe</h2>{{users.name}}
+        </md-list-item>
+        
+    </md-list>
+ 
+    <pagination-controls previousLabel=""
+                         align="center" 
+                         nextLabel=""
+                         class="my-pagination"
+                         (pageChange)="p = $event">
+    </pagination-controls>
+   </md-card>
