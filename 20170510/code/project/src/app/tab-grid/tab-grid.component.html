@@ -1,0 +1,10 @@
+<md-card>
+<md-list>
+  <h3 md-subheader>Items</h3>
+  <md-list-item *ngFor="let items of item">
+    <i class="material-icons">done</i>
+    <h4 md-line>{{items.name}}</h4>
+    <p md-line>{{items.desc}}</p>
+  </md-list-item>
+</md-list>
+</md-card>
