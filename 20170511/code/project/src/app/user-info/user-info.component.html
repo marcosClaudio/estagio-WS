@@ -1,0 +1,20 @@
+<md-card class="card">
+<h3>User ID: {{user.id}}</h3>
+<p>Name: {{user.name}}</p>
+<p>User name: {{user.username}}</p>
+<p>Email: {{user.email}}</p>
+<p>Street: {{address.street}}</p>
+<p>Suite: {{address.suite}}</p>
+<p>City: {{address.city}}</p>
+<p>Zip Code: {{address.zipcode}}</p>
+</md-card>
+
+<md-card class="card">
+  <h2>User posts</h2>
+  <md-list>
+    <md-list-item *ngFor="let posts of post">
+      <h3>{{posts.id}}:</h3>
+      <a [routerLink]="[ '/post', posts.id ]"><p>{{posts.title}}</p></a>
+    </md-list-item>
+  </md-list>
+</md-card>

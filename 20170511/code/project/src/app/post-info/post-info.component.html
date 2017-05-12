@@ -1,0 +1,26 @@
+<md-card class="card">
+<p>Author name: {{author.name}} </p>
+<p>Email: {{author.email}} </p>
+</md-card>
+
+<md-card class="card">
+  <md-list-item>
+<h4>Post ID: {{post.id}}</h4>
+<h4>Post title: {{post.title}}</h4>
+<p>Post content: {{post.body}}</p>
+  </md-list-item>
+  </md-card>
+
+<md-card class="card">
+<ul>
+  <li *ngFor="let comment of comments">
+    <md-list-item>
+    <p>Comment ID: {{comment.id}}</p>
+    <p>Title comment: {{comment.name}}</p>
+    <p>Email comment: {{comment.email}}</p>
+    <h4>Content comment: {{comment.body}}</h4>
+    </md-list-item>
+    <hr> 
+  </li>
+</ul>
+</md-card>

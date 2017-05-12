@@ -11,20 +11,20 @@ import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from "@angular/material";
-import { TabGridComponent } from './tab-grid/tab-grid.component';
 import { ListIndexComponent } from './list-index/list-index.component';
 import { UsersIndexComponent } from './users-index/users-index.component';
 import { routing } from "app/app.route";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PostInfoComponent } from './post-info/post-info.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabGridComponent,
     ListIndexComponent,
     UsersIndexComponent,
-    PostInfoComponent
+    PostInfoComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,6 @@ import { PostInfoComponent } from './post-info/post-info.component';
   ],
   bootstrap: [AppComponent],
   exports: [
-    TabGridComponent,
     ListIndexComponent
   ]
 })
