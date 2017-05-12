@@ -1,0 +1,25 @@
+<md-toolbar color="primary">
+  <button md-mini-fab style="background-color:transparent" [mdMenuTriggerFor]="menu">
+    <i class="material-icons">reorder</i>
+  </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item routerLink="posts">
+      <i class="material-icons">description</i>
+      <span>Posts</span>
+    </button>
+
+    <button md-menu-item routerLink="users">
+      <i class="material-icons">perm_identity</i>
+      <span>Users</span>
+    </button>
+  </md-menu>
+  <h2 style="margin-left: 10px">
+  Manager
+  </h2>
+</md-toolbar>
+
+<md-toolbar style="background-color:blueviolet">
+</md-toolbar>
+
+<!-- -------------------------------------------------------------------------- -->
+  <router-outlet></router-outlet>
