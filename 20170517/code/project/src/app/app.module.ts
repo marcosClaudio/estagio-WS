@@ -1,24 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+import { MaterialModule } from "@angular/material";
+import { NgxPaginationModule} from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from "@angular/material";
-import { routing } from "app/app.route";
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppRoute } from "./app.route";
 import { PanphletComponent } from "app/panphlet/panphlet.component";
-import { ProductComponent } from "app/product/product.component";
 import { MarkComponent } from './mark/mark.component';
 import { OfferComponent } from './offer/offer.component';
+import { ProductModule } from "app/product/product.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
     PanphletComponent,
     MarkComponent,
     OfferComponent
@@ -30,14 +29,14 @@ import { OfferComponent } from './offer/offer.component';
     MaterialModule,
     BrowserAnimationsModule,
     NgxPaginationModule,
-    routing,
+    AppRoute,
+    ProductModule,
     FlexLayoutModule
   ],
   providers: [
   ],
   bootstrap: [AppComponent],
   exports: [
-    ProductComponent,
     PanphletComponent
   ]
 })

@@ -2,7 +2,7 @@
     margin-left: 20px;
     width: 93.5%;
     margin-top: 20px;
-    height: 100%;
+    height: auto;
 }
 .my-pagination /deep/ .ngx-pagination .current {
     background: #673ab7;
@@ -17,4 +17,12 @@
 .profile-action-card{min-height: 243px !important;}
 .mat-select-trigger {
     min-width: 312px !important;
+}
+
+.Rectangle-7 {
+  width: 265px;
+  height: 48px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: solid 1px #673ab7 !important;
 }

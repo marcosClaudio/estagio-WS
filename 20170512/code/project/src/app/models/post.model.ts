@@ -1,8 +1,8 @@
 export class Post{
-  private userId?: number;
-  private id?: number;
-  private title?: string;
-  private body?: string;
+  public userId?: number;
+  public id?: number;
+  public title?: string;
+  public body?: string;
   constructor(
     userId?: number,
     id?: number,

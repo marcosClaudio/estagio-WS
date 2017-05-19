@@ -15,3 +15,6 @@
   padding-top:65px !important;
 }
 .profile-action-card{min-height: 243px !important;}
+.mat-select-trigger {
+    min-width: 312px !important;
+}

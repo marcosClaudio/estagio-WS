@@ -9,15 +9,19 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from "@angular/material";
 import { routing } from "app/app.route";
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { PanphletComponent } from "app/panphleto/panphlet/panphlet.component";
-import { ProductComponent } from "app/product/product/product.component";
+import { PanphletComponent } from "app/panphlet/panphlet.component";
+import { ProductComponent } from "app/product/product.component";
+import { MarkComponent } from './mark/mark.component';
+import { OfferComponent } from './offer/offer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    PanphletComponent
+    PanphletComponent,
+    MarkComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,
