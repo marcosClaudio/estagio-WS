@@ -1,0 +1,34 @@
+<md-card class="card">
+
+  <button md-fab class="fab-button" (click)="openDialog()">
+    <i class="material-icons">add</i>
+  </button>
+
+  <md-card style="margin-bottom: 20px; background-color: red">
+  <div fxLayout="row" fxLayoutAlign=" none">
+    <div fxFlex="52"><strong>Nome do produto</strong></div>
+    <div fxFlex="20"><strong>Preco</strong></div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="8"><strong>Acoes</strong></div>
+  </div>
+  </md-card>
+
+<md-list-item *ngFor="let item of productList | paginate: { itemsPerPage: 10, currentPage: p}">
+  <div fxLayout="row" fxLayoutAlign=" none" >
+    <div fxFlex="52"> <p>{{item.title}}</p> </div>
+    <div fxFlex="20">R$:{{item.id}},00</div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="4"><button mdTooltip="Visualizar" md-mini-fab class="mat-ripple"><i class="material-icons">zoom_out</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" md-mini-fab class="mat-ripple"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" md-mini-fab class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+  </div>
+  <hr>
+</md-list-item>
+
+<pagination-controls (pageChange)="p = $event"
+  previousLabel=""
+  nextLabel=""
+  align="center">
+  </pagination-controls>
+
+</md-card>

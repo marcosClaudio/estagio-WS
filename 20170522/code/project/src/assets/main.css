@@ -1,0 +1,39 @@
+.card {
+    margin-left: 20px;
+    width: 93.5%;
+    margin-top: 20px;
+    height: auto;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #673ab7;
+  }
+  .nopadding{padding: 0 !important;}
+  .profile-data-card{
+  border-radius: 3px 0 0 3px; 
+  min-height: 291px !important; 
+  padding-left:35px !important;
+  padding-top:65px !important;
+}
+.profile-action-card{min-height: 243px !important;}
+.mat-select-trigger {
+    min-width: 312px !important;
+}
+
+.Rectangle-7 {
+  width: 265px;
+  height: 48px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: solid 1px #673ab7 !important;
+}
+
+.mat-ripple {
+  background-color: transparent !important;
+}
+
+.fab-button {
+ position: fixed !important; 
+  right: 0; 
+  bottom: 0;
+  background: #673ab7 !important;
+}

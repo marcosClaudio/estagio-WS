@@ -1,0 +1,11 @@
+<md-card class="card">
+<md-list-item *ngFor="let item of productList">
+  <div fxLayout="row" fxLayoutAlign=" none" >
+    <div fxFlex="auto"> <p>{{item.title}}</p> </div>
+    <div fxFlex="4"><button mdTooltip="Visualizar" md-mini-fab class="mat-ripple"><i class="material-icons">zoom_out</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" md-mini-fab class="mat-ripple"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" md-mini-fab class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+  </div>
+  <hr>
+</md-list-item>
+</md-card>
