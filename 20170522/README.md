@@ -18,6 +18,8 @@ podermos identificar o produto a qual queremos visualizar.
 ]}
 ];
 ```
+3. Para usarmos a rota filha e bem facil, apenas colocamos ```<router-outlet></router-outlet>``` no html do  
+componente pai.
 ---
 # Impedimentos:
 * Nenhum.
