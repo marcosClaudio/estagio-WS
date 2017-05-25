@@ -25,4 +25,12 @@ export class ProductServiceService {
     )
   }
 
+  save(data) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let url: string = 'https://jsonplaceholder.typicode.com/posts/';
+    return this.http.post(url,data,headers).map(res =>
+    res.json()
+    )
+  }
+
 }

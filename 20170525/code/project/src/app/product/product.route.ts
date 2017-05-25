@@ -11,7 +11,7 @@ export const PRODUCT_ROUTES: Route[] = [
     children: [
   { path: '', component: ListProductComponent},
   { path: 'edit/:id', component: EditProductComponent },
-  { path: 'view:id', component: VisualizeProductComponent },
+  { path: 'view/:id', component: VisualizeProductComponent },
   { path: 'add-product', component: AddProductComponent }
     ]}
   ];

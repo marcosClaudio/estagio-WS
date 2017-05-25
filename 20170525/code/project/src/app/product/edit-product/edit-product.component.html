@@ -1,3 +1,40 @@
-<p>
-  edit-product works!
-</p>
+<div fxLayout="column" fxLayoutAlign="center center">
+
+  <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
+    <md-input-container style="width: 310px">
+      <input mdInput type="url" readonly placeholder="Upload da imagem do produto">
+    </md-input-container>
+
+     <button md-mini-fab style="margin-left:20px">
+        <i class="material-icons">file_upload</i>
+     </button>
+  </div>
+
+<table align="center">
+  <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #nome placeholder="Nome do produto" value="{{product.title}}">
+    </md-input-container>
+    </td>
+
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #preco placeholder="Preco" value="R$:{{product.id}},00">
+    </md-input-container>
+    </td>
+  </tr>
+</table>
+
+  <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="/product">Cancelar</button>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="30">
+    <button md-button (click)="save(nome.value, preco.value)">Salvar</button>
+    </div>
+  </div>
+</div>
+
+
