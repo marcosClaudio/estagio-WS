@@ -1,0 +1,36 @@
+<md-card class="card">
+<div fxLayout="column" fxLayoutAlign="center center">
+
+  <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
+    <md-input-container style="width: 310px">
+      <input mdInput placeholder="Upload do panfleto">
+    </md-input-container>
+
+     <button md-mini-fab style="margin-left:20px">
+        <i class="material-icons">file_upload</i>
+     </button>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
+    <div fxLayout="row" fxLayoutAlign="space-around start" >
+    <md-input-container>
+      <input mdInput type="date" placeholder="Data inicial">
+    </md-input-container>
+      <span style="margin-left: 10px">&nbsp;</span>
+    <md-input-container>
+      <input mdInput type="date" placeholder="Data final">
+    </md-input-container>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="panphlet">Voltar</button>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="40">
+    <button md-button>Enviar</button>
+    </div>
+  </div>
+</div>
+</md-card>

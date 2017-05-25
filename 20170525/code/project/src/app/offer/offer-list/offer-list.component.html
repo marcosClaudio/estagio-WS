@@ -1,0 +1,38 @@
+  <button md-fab class="fab-button" routerLink="add-offer">
+    <i class="material-icons">add</i>
+  </button>
+
+  <md-card style="margin-bottom: 20px; background-color: red">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="20"><strong>Nome da oferta</strong></div>
+    <div fxFlex="20"><strong>Inicio da oferta</strong></div>
+    <div fxFlex="18"> <strong>Final da oferta</strong></div>
+    <div fxFLex="20"><strong>Produtos</strong></div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="8"><strong>Acoes</strong></div>
+  </div>
+  </md-card>
+
+<md-list-item *ngFor="let offer of offerList | paginate: { itemsPerPage: 3, currentPage: p}">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="22"> <p>{{offer.nome}}</p> </div>
+    <div fxFlex="20">{{offer.dataInicio}}</div>
+    <div fxFLex="20">{{offer.dataFim}}</div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="30">
+      <md-select placeholder="Produtos">
+        <md-option *ngFor="let product of offer.products">{{ product.name }}</md-option>
+      </md-select>
+    </div>
+    <div fxFlex="4"><button mdTooltip="Visualizar" md-icon-button class="mat-ripple"><i class="material-icons">search</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" md-icon-button class="mat-ripple"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" md-icon-button class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+  </div>
+  <hr>
+</md-list-item>
+
+<pagination-controls (pageChange)="p = $event"
+  previousLabel=""
+  nextLabel=""
+  align="center">
+  </pagination-controls>
