@@ -1,0 +1,28 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <div fxFlex="auto">
+    <md-input-container style="width: 310px">
+      <input mdInput type="url" readonly placeholder="Upload da imagem da marca">
+    </md-input-container>
+
+     <button md-mini-fab style="margin-left:20px">
+        <i class="material-icons">file_upload</i>
+     </button>
+  </div>
+  <div>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #nome placeholder="Nome da marca" value="{{mark.name}}">
+    </md-input-container>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="/mark">Cancelar</button>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="30">
+    <button md-button (click)="saveEdit(mark.id,nome.value)">Salvar</button>
+    </div>
+  </div>
+</div>
