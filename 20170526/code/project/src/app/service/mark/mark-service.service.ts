@@ -8,26 +8,26 @@ export class MarkServiceService {
   constructor(private http: Http) { }
 
   list() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users')
+    return this.http.get('http://localhost:3000/marks')
     .map( res => res.json()
     )
   }
 
   getById(id: number) {
-    return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`).map(res => 
+    return this.http.get(`http://localhost:3000/marks/${id}`).map(res => 
       res.json()
     )
   }
 
   deleteById(id: number) {
-    return this.http.delete(`https://jsonplaceholder.typicode.com/users/${id}`).map(res => 
+    return this.http.delete(`http://localhost:3000/marks/${id}`).map(res => 
       res.json()
     )
   }
 
   save(data) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
-    let url: string = 'https://jsonplaceholder.typicode.com/users/';
+    let url: string = 'http://localhost:3000/marks';
     return this.http.post(url,data,headers).map(res =>
     res.json()
     )

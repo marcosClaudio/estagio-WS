@@ -6,8 +6,7 @@ import { Product } from '../models/product.model';
 
 @Component({
   selector: 'app-edit-product',
-  templateUrl: './edit-product.component.html',
-  styleUrls: ['./edit-product.component.css']
+  templateUrl: './edit-product.component.html'
 })
 export class EditProductComponent implements OnInit {
   product = [];

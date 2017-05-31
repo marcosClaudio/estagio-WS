@@ -5,8 +5,17 @@
 
 <div fxLayout="row" fxLayoutAlign="space-around start">
   <div fxFlex="1"></div>
-  <div fxFlex="auto"><h3>{{product.title}}</h3></div>
-  <div fxFlex="30.5"><h3>R${{product.id}},00</h3></div>
+  <div fxFlex="auto"><h3>{{product.name}}</h3></div>
+  <div fxFlex="30.5"><h3>R${{product.price}},00</h3></div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-between center">   
+  <div fxFlex="40">
+    <md-list-item *ngFor="let image of product">
+      <img src="{{image.image}}">
+    </md-list-item>
+  </div>
+  <div fxFlex="40"><img src="{{product.image}}"></div>
 </div>
 
 <div fxLayout="row" fxLayoutAlign="center center" >

@@ -11,43 +11,13 @@
      </button>
   </div>
 
-<table align="center">
-  <tr>
-    <td>
-      <md-input-container style="width: 310px; margin-right: 60px;">
-      <input mdInput placeholder="Nome do produto">
+    <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #name placeholder="Nome do produto">
     </md-input-container>
-    </td>
 
-    <td>
-      <md-input-container style="width: 310px; margin-right: 60px;">
-      <input mdInput placeholder="Preco">
+    <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #price placeholder="Preco">
     </md-input-container>
-    </td>
-
-  </tr>
-  <tr>
-    <td>
-      <md-input-container style="width: 310px; margin-right: 60px;">
-      <input mdInput placeholder="Unidade de medida / Medida">
-    </md-input-container>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <md-input-container>
-      <input mdInput type="date" placeholder="Data inicial">
-    </md-input-container>
-    </td>
-
-    <td>
-      <md-input-container>
-      <input mdInput type="date" placeholder="Data final">
-    </md-input-container>
-    </td>
-  </tr>
-</table>
-
 
   <div fxLayout="row" fxLayoutAlign="space-around none">
     <div fxFlex="20">
@@ -55,9 +25,9 @@
     </div>
     <div fxFlex></div>
     <div fxFlex="30">
-    <button md-button>Enviar</button>
+    <button md-button (click)="save(name.value, price.value)">Salvar</button>
     </div>
   </div>
+
 </div>
 </md-card>
-

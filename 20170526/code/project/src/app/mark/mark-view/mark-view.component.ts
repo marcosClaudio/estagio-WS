@@ -19,7 +19,6 @@ export class MarkViewComponent implements OnInit {
     this.route.params.subscribe((params: any) => {
       let id = params['id'];
       this.markService.getById(id).subscribe( mark => {
-      console.log(mark.title),
       this.mark = mark;
     },
      error => {

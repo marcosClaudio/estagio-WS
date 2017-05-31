@@ -3,7 +3,7 @@
 
     <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
     <md-input-container style="width: 310px">
-      <input mdInput type="url" readonly placeholder="Upload do logo">
+      <input mdInput type="url" #logo placeholder="Upload do logo">
     </md-input-container>
      <button md-mini-fab style="margin-left:20px">
         <i class="material-icons">file_upload</i>
@@ -12,13 +12,19 @@
 
     <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
       <md-input-container>
-        <input mdInput placeholder="Nome da marca" style="width: 310px; margin-right: 60px;">
+        <input mdInput #name placeholder="Nome da marca" style="width: 310px; margin-right: 60px;">
       </md-input-container>
     </div>
 
-    <div fxLayout="row" fxLayoutAlign="space-around none" style="margin-top: 20px">
-    <button md-button>Enviar</button>
+   <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="/mark">Cancelar</button>
     </div>
+    <div fxFlex></div>
+    <div fxFlex="30">
+    <button md-button (click)="save(name.value, logo.value)">Salvar</button>
+    </div>
+  </div>
 
   </div>
 </md-card>

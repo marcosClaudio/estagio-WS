@@ -20,7 +20,7 @@ export class VisualizeProductComponent implements OnInit {
   this.route.params.subscribe((params: any) => {
       let id = params['id'];
       this.productService.getById(id).subscribe( product => {
-      console.log(product.title),
+      console.log(product.image),
       this.product = product;
     },
      error => {

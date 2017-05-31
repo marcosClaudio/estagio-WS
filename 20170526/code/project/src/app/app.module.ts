@@ -14,6 +14,7 @@ import { AppRoute } from "./app.route";
 import { OfferComponent } from './offer/offer.component';
 import { ProductModule } from './product/product.module';
 import { ProductServiceService } from './service/product/product-service.service';
+import { OfferServiceService } from './service/offer/offer-service.service';
 import { MarkServiceService } from './service/mark/mark-service.service';
 import { OfferAddComponent } from './offer/offer-add/offer-add.component';
 import { OfferListComponent } from './offer/offer-list/offer-list.component';
@@ -40,7 +41,8 @@ import { OfferModule } from './offer/offer.module';
   ],
   providers: [
     ProductServiceService,
-    MarkServiceService
+    MarkServiceService,
+    OfferServiceService
   ],
   bootstrap: [AppComponent],
   exports: [
