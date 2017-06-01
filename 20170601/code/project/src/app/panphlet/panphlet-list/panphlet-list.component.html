@@ -1,0 +1,30 @@
+  <button md-fab class="fab-button" routerLink="add-panphlet">
+    <i class="material-icons">add</i>
+  </button>
+
+  <md-card style="margin-bottom: 20px; background-color: red">
+  <div fxLayout="row" fxLayoutAlign=" none">
+    <div fxFlex="52"><strong>Data de inicio do panfleto</strong></div>
+    <div fxFlex="20"><strong>Data final do panfleto</strong></div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="8"><strong>Acoes</strong></div>
+  </div>
+  </md-card>
+
+<md-list-item *ngFor="let panphlet of panphletList | paginate: { itemsPerPage: 3, currentPage: p}">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="52"> <p>{{panphlet.initialDate}}</p> </div>
+    <div fxFlex="20">{{panphlet.endDate}}</div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="4"><button mdTooltip="Visualizar" [routerLink]="['view', panphlet.id]" md-icon-button class="mat-ripple"><i class="material-icons">search</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" [routerLink]="['edit', panphlet.id]" md-icon-button class="mat-ripple"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" (click)="delete(panphlet.id)" md-icon-button class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+  </div>
+  <hr>
+</md-list-item>
+
+<pagination-controls (pageChange)="p = $event"
+  previousLabel=""
+  nextLabel=""
+  align="center">
+  </pagination-controls>

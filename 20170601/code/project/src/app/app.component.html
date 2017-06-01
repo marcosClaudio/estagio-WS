@@ -1,0 +1,36 @@
+<md-toolbar color="primary">
+  <div fxLayout="row" fxFlex="36">
+  <button md-mini-fab style="background-color:transparent" [mdMenuTriggerFor]="menu">
+    <i class="material-icons">reorder</i>
+  </button>
+
+  <md-menu #menu="mdMenu">
+    <button md-menu-item routerLink="panphlet">
+      <i class="material-icons">description</i>
+      <span>Panfleto</span>
+    </button>
+    <button md-menu-item routerLink="product">
+      <i class="material-icons">shopping_basket</i>
+      <span>Produtos</span>
+    </button>
+    <button md-menu-item routerLink="offer">
+      <i class="material-icons">import_contacts</i>
+      <span>Ofertas</span>
+    </button>
+    <button md-menu-item routerLink="mark">
+      <i class="material-icons">loyalty</i>
+      <span>Marcas</span>
+    </button>
+  </md-menu>
+  </div>
+
+  <h2 style="margin-left: 10px">
+  Gerenciador de conteudo
+  </h2>
+</md-toolbar>
+
+<md-toolbar style="background-color:blueviolet">
+</md-toolbar>
+
+<!-- -------------------------------------------------------------------------- -->
+  <router-outlet></router-outlet>
