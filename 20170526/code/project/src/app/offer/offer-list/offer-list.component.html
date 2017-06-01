@@ -19,12 +19,11 @@
     <div fxFlex="20">{{offer.initialDate}}</div>
     <div fxFLex="20">{{offer.endDate}}</div>
     <div fxFlex="auto"></div>
-    <div fxFlex="30">
-      
-    </div>
-    <div fxFlex="4"><button mdTooltip="Visualizar" md-icon-button class="mat-ripple"><i class="material-icons">search</i></button></div>
-    <div fxFlex="4"><button mdTooltip="Editar" md-icon-button class="mat-ripple"><i class="material-icons">create</i></button> </div>
-    <div fxFlex="4"><button mdTooltip="Remover" md-icon-button class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+    <div fxFlex="30"></div>
+    
+    <div fxFlex="4"><button mdTooltip="Visualizar" [routerLink]="['view', offer.id]" md-icon-button class="mat-ripple"><i class="material-icons">search</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" [routerLink]="['edit', offer.id]" md-icon-button class="mat-ripple"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" (click)="delete(offer.id)" md-icon-button class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
   </div>
   <hr>
 </md-list-item>

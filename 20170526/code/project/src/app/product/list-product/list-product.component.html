@@ -11,14 +11,14 @@
   </div>
   </md-card>
 
-<md-list-item *ngFor="let item of productList | paginate: { itemsPerPage: 10, currentPage: p}">
+<md-list-item *ngFor="let product of productList | paginate: { itemsPerPage: 10, currentPage: p}">
   <div fxLayout="row" fxLayoutAlign="start center">
-    <div fxFlex="52"> <p>{{item.title}}</p> </div>
-    <div fxFlex="20">R$:{{item.id}},00</div>
+    <div fxFlex="52"> <p>{{product.name}}</p> </div>
+    <div fxFlex="20">R$:{{product.price}},00</div>
     <div fxFlex="auto"></div>
-    <div fxFlex="4"><button mdTooltip="Visualizar" md-icon-button class="mat-ripple" [routerLink]="['view', item.id]"><i class="material-icons">search</i></button></div>
-    <div fxFlex="4"><button mdTooltip="Editar" md-icon-button class="mat-ripple" [routerLink]="['edit', item.id]"><i class="material-icons">create</i></button> </div>
-    <div fxFlex="4"><button mdTooltip="Remover" md-icon-button (click)="delete(item.id)" class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Visualizar" md-icon-button class="mat-ripple" [routerLink]="['view', product.id]"><i class="material-icons">search</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" md-icon-button class="mat-ripple" [routerLink]="['edit', product.id]"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" md-icon-button (click)="delete(product.id)" class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
   </div>
   <hr>
 </md-list-item>

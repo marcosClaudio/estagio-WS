@@ -12,6 +12,7 @@ import { NgxPaginationModule} from 'ngx-pagination';
 import { OfferAddComponent } from './offer-add/offer-add.component';
 import { OfferListComponent } from './offer-list/offer-list.component';
 import { OfferViewComponent } from './offer-view/offer-view.component';
+import { OfferEditComponent } from './offer-edit/offer-edit.component';
 import { OfferComponent } from "app/offer/offer.component";
 
 @NgModule({
@@ -20,6 +21,7 @@ import { OfferComponent } from "app/offer/offer.component";
     OfferAddComponent,
     OfferListComponent,
     OfferViewComponent,
+    OfferEditComponent
   ],
   imports: [
     BrowserModule,

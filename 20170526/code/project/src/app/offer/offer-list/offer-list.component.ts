@@ -13,6 +13,15 @@ export class OfferListComponent implements OnInit {
     private offerService: OfferServiceService
   ) { }
 
+    delete(id) {
+    this.offerService.deleteById(id).subscribe( success => {
+    alert('Deletado');
+    },
+    error => {
+      alert('Erro');
+    })
+  }
+
   ngOnInit() {
     this.offerService.list().subscribe( offers => {
       this.offerList = offers;

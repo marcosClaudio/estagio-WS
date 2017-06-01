@@ -20,8 +20,8 @@ export class EditProductComponent implements OnInit {
     this.productModel = new Product();
    }
 
-  save(i, u) {
-    this.productModel = [i , u];
+  save(id,name,price,image) {
+    this.productModel = [{id:id,name:name,price:price,image:image}];
     JSON.stringify(this.productModel);
     console.log(this.productModel);
     this.productService.save(this.productModel).subscribe( success => {

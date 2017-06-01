@@ -1,9 +1,8 @@
-<md-card class="card">
 <div fxLayout="column" fxLayoutAlign="center center">
 
   <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
     <md-input-container style="width: 310px">
-      <input mdInput type="url" readonly placeholder="Upload da imagem do produto">
+      <input mdInput type="url" #image placeholder="Upload da imagem do produto">
     </md-input-container>
 
      <button md-mini-fab style="margin-left:20px">
@@ -15,34 +14,13 @@
   <tr>
     <td>
       <md-input-container style="width: 310px; margin-right: 60px;">
-      <input mdInput placeholder="Nome do produto">
+      <input mdInput #name placeholder="Nome do produto">
     </md-input-container>
     </td>
 
     <td>
       <md-input-container style="width: 310px; margin-right: 60px;">
-      <input mdInput placeholder="Preco">
-    </md-input-container>
-    </td>
-
-  </tr>
-  <tr>
-    <td>
-      <md-input-container style="width: 310px; margin-right: 60px;">
-      <input mdInput placeholder="Unidade de medida / Medida">
-    </md-input-container>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <md-input-container>
-      <input mdInput type="date" placeholder="Data inicial">
-    </md-input-container>
-    </td>
-
-    <td>
-      <md-input-container>
-      <input mdInput type="date" placeholder="Data final">
+      <input mdInput #price placeholder="Preco">
     </md-input-container>
     </td>
   </tr>
@@ -51,13 +29,12 @@
 
   <div fxLayout="row" fxLayoutAlign="space-around none">
     <div fxFlex="20">
-    <button md-button>Adicionar</button>
+    <button md-button routerLink="/product">Cancelar</button>
     </div>
     <div fxFlex></div>
     <div fxFlex="30">
-    <button md-button>Enviar</button>
+    <button md-button (click)="save(name.value, price.value, image.value)">Enviar</button>
     </div>
   </div>
 </div>
-</md-card>
 
