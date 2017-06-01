@@ -2,12 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MdDialog, MdDialogRef} from '@angular/material';
 
 import { ListProductComponent } from './list-product/list-product.component';
-import { ActionCardComponent } from './action-card/action-card.component';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  templateUrl: './product.component.html'
 })
 export class ProductComponent implements OnInit {
   products: String;
