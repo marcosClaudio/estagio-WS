@@ -15,7 +15,8 @@
 
 <md-list-item *ngFor="let product of productList | paginate: { itemsPerPage: 10, currentPage: p}">
   <div fxLayout="row" fxLayoutAlign="start center">
-    <div fxFlex="52"> <p>{{product.name}}</p> </div>
+    <div fxFlex="1"></div>
+    <div fxFlex="51"> <p>{{product.name}}</p> </div>
     <div fxFlex="20">R$:{{product.price}},00</div>
     <div fxFlex="auto"></div>
     <div fxFlex="4"><button mdTooltip="Visualizar" md-icon-button class="mat-ripple" [routerLink]="['view', product.id]"><i class="material-icons">search</i></button></div>

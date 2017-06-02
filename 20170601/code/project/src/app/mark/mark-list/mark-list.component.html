@@ -12,6 +12,7 @@
 
 <md-list-item *ngFor="let mark of markList | paginate: { itemsPerPage: 5, currentPage: p}">
   <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="1"></div>
     <div fxFlex="52"> <p>{{mark.name}}</p> </div>
     <div fxFlex="20"></div>
     <div fxFlex="auto"></div>
