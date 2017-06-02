@@ -2,16 +2,16 @@
     <i class="material-icons">add</i>
   </button>
 
-  <md-card style="margin-bottom: 20px; background-color: red">
-  <div fxLayout="row" fxLayoutAlign="start center">
-    <div fxFlex="20"><strong>Nome da oferta</strong></div>
-    <div fxFlex="20"><strong>Inicio da oferta</strong></div>
-    <div fxFlex="18"> <strong>Final da oferta</strong></div>
-    <div fxFLex="20"><strong>Produtos</strong></div>
+   <md-toolbar color="accent">
+  <div fxFlex="100" fxLayout="row" fxLayoutAlign="none none" >
+    <div fxFlex="22"><strong>Nome da oferta</strong></div>
+    <div fxFlex="21"><strong>Inicio</strong></div>
+    <div fxFlex="10"><strong>Fim</strong></div>
     <div fxFlex="auto"></div>
     <div fxFlex="8"><strong>Acoes</strong></div>
   </div>
-  </md-card>
+</md-toolbar>
+
 
 <md-list-item *ngFor="let offer of offerList">
   <div fxLayout="row" fxLayoutAlign="start center">

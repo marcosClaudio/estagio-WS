@@ -2,14 +2,16 @@
     <i class="material-icons">add</i>
   </button>
 
-  <md-card style="margin-bottom: 20px; background-color: red">
-  <div fxLayout="row" fxLayoutAlign=" none">
+
+
+  <md-toolbar color="accent">
+  <div fxFlex="100" fxLayout="row" fxLayoutAlign="none none" >
     <div fxFlex="52"><strong>Nome do produto</strong></div>
     <div fxFlex="20"><strong>Preco</strong></div>
     <div fxFlex="auto"></div>
     <div fxFlex="8"><strong>Acoes</strong></div>
   </div>
-  </md-card>
+</md-toolbar>
 
 <md-list-item *ngFor="let product of productList | paginate: { itemsPerPage: 10, currentPage: p}">
   <div fxLayout="row" fxLayoutAlign="start center">
@@ -26,5 +28,6 @@
 <pagination-controls (pageChange)="p = $event"
   previousLabel=""
   nextLabel=""
+  class="customTheme"
   align="center">
   </pagination-controls>

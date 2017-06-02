@@ -10,7 +10,7 @@ export const PANPHLET_ROUTES: Route[] = [
   { path: 'panphlet', component: PanphletComponent,
     children: [
   { path: '', component: PanphletListComponent},
-  { path: 'view/:id', component: PanphletViewComponent },
+  { path: 'view', component: PanphletViewComponent },
   { path: 'edit/:id', component: PanphletEditComponent},
   { path: 'add-panphlet', component: PanphletAddComponent }
     ]}

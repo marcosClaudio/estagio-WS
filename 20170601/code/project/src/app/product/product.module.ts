@@ -12,7 +12,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductComponent } from "./product.component";
 import { ListProductComponent } from './list-product/list-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
-import { RemoveProductComponent } from './list-product/remove-product.component';
 import { VisualizeProductComponent } from './visualize-product/visualize-product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 
@@ -21,7 +20,6 @@ import { AddProductComponent } from './add-product/add-product.component';
     ProductComponent,
     ListProductComponent,
     EditProductComponent,
-    RemoveProductComponent,
     VisualizeProductComponent,
     AddProductComponent
   ],
