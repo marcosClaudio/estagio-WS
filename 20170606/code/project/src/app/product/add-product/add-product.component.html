@@ -1,9 +1,16 @@
 <div fxLayout="column" fxLayoutAlign="center center">
-
-  <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
-    <md-input-container style="width: 310px">
-      <input mdInput type="url" #image placeholder="Url da imagem do produto">
-    </md-input-container>
+  <div fxLayout="row" fxLayoutAlign="none none">
+    <div fxFlex="20">
+      <md-input-container style="width: 310px; margin-right: 120px">
+        <input mdInput type="url" #image placeholder="Url da imagem do produto">
+      </md-input-container>
+    </div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="50">
+      <md-input-container style="width: 310px">
+        <input mdInput type="url" #image2 placeholder="Outra Url da imagem do produto">
+      </md-input-container>
+    </div>
   </div>
 
 <table align="center">
@@ -44,7 +51,7 @@
     </div>
     <div fxFlex></div>
     <div fxFlex="30">
-    <button md-button (click)="save(name.value.count, name.value, price.value, image.value, mark.value, offer.value)">Enviar</button>
+    <button md-button (click)="save(name.value.count, name.value, price.value, image.value, image2.value, mark.value, offer.value)">Enviar</button>
     </div>
   </div>
 </div>

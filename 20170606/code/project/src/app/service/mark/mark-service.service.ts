@@ -35,7 +35,7 @@ export class MarkServiceService {
 
   edit(data) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
-    let url: string = 'http://localhost:3000/marks';
+    let url: string = `http://localhost:3000/marks/${data.id}`;
     return this.http.put(url,data,headers).map(res =>
     res.json()
     )

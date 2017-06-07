@@ -33,7 +33,6 @@ export class PanphletEditComponent implements OnInit {
     save(id,initialDate,endDate,imageUrl, imageUrl2) {
     this.panphletModel = {id:id,initialDate:initialDate,endDate:endDate,panphletUrl:[imageUrl, imageUrl2]};
     JSON.stringify(this.panphletModel);
-    console.log(this.panphletModel);
     this.panphletService.edit(this.panphletModel).subscribe( success => {
     alert('Panfleto editado com sucesso!')},
     error => {

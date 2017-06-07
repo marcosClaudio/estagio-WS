@@ -13,7 +13,7 @@
   </div>
 </md-toolbar>
 
-<md-list-item *ngFor="let product of productList | paginate: { itemsPerPage: 10, currentPage: p}">
+<md-list-item *ngFor="let product of productList | paginate: { itemsPerPage: 3, currentPage: p}">
   <div fxLayout="row" fxLayoutAlign="start center">
     <div fxFlex="1"></div>
     <div fxFlex="51"> <p>{{product.name}}</p> </div>

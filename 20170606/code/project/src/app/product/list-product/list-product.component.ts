@@ -4,8 +4,7 @@ import { ProductServiceService } from '../../service/product/product-service.ser
 
 @Component({
   selector: 'app-list-product',
-  templateUrl: './list-product.component.html',
-  styleUrls: ['./list-product.component.css']
+  templateUrl: './list-product.component.html'
 })
 export class ListProductComponent implements OnInit {
 

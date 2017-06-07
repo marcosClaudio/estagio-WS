@@ -31,8 +31,7 @@ export class MarkEditComponent implements OnInit {
 
   saveEdit(id,name, logo) {
     this.markModel = {id:id, name:name, logo:logo};
-    console.log(this.markModel);
-    this.markService.save(this.markModel).subscribe( success => {
+    this.markService.edit(this.markModel).subscribe( success => {
       alert('Marca editada com sucesso')
     },
     error => {

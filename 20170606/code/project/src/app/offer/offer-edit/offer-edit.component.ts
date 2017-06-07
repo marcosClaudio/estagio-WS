@@ -29,10 +29,10 @@ export class OfferEditComponent implements OnInit {
     });
   }
 
-    save(id,name,initialDate,endDate,productList) {
+  save(id,name,initialDate,endDate,productList) {
     this.offerModel = {id: id, name:name, initialDate:initialDate, endDate:endDate, productList: []};
     console.log(this.offerModel);
-    this.offerService.save(this.offerModel).subscribe( success => {
+    this.offerService.edit(this.offerModel).subscribe( success => {
     alert('Oferta editada com sucesso')},
     error => {
       alert('erro');

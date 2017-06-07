@@ -35,7 +35,7 @@ list() {
 
   edit(data) {
     let headers = new Headers({ 'Content-type': 'application/json'});
-    let url: string = 'http://localhost:3000/panphlet';
+    let url: string = `http://localhost:3000/panphlet/${data.id}`;
     return this.http.put(url,data,headers).map(res =>
     res.json()
     )

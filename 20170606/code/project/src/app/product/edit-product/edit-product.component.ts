@@ -11,16 +11,15 @@ import { Product } from '../models/product.model';
 export class EditProductComponent implements OnInit {
   product = [];
   productModel: any;
+  productImage = [];
 
   constructor(
     private route: ActivatedRoute,
     private productService: ProductServiceService
   ) { }
 
-  save(id,name,price,image, mark, offer) {
-    this.productModel = {id:id,name:name,price:price,image:image, markId: mark, offerID: offer};
-    JSON.stringify(this.productModel);
-    console.log(this.productModel);
+  save(id,name,price,image1, image2, mark, offer) {
+    this.productModel = {id:id,name:name,price:price,image:[image1, image2], markId: mark, offerID: offer};
     this.productService.edit(this.productModel).subscribe( success => {
     alert('Produto editado com sucesso')},
     error => {
@@ -34,6 +33,7 @@ export class EditProductComponent implements OnInit {
       let id = params['id'];
       this.productService.getById(id).subscribe( product => {
       this.product = product;
+      this.productImage = product.image;
     },
      error => {
       alert('error: ');

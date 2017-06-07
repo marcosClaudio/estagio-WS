@@ -35,7 +35,7 @@ export class OfferServiceService {
 
    edit(data) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
-    let url: string = 'http://localhost:3000/offer';
+    let url: string = `http://localhost:3000/offer/${data.id}`;
     return this.http.put(url,data,headers).map(res =>
     res.json()
     )

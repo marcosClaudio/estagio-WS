@@ -14,8 +14,8 @@ export class AddProductComponent implements OnInit {
     private productService: ProductServiceService
   ) { }
 
-save(id,name, price, image, mark, offer) {
-    this.productModel = {id:id, name:name, price:price, image: image, markID: mark, offerID: offer};
+save(id,name, price, image1, image2, mark, offer) {
+    this.productModel = {id:id, name:name, price:price, image:[image1, image2], markID: mark, offerID: offer};
     JSON.stringify(this.productModel);
     console.log(this.productModel);
     this.productService.save(this.productModel).subscribe( success => {
