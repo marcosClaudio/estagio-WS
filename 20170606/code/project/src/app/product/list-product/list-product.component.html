@@ -1,0 +1,34 @@
+  <button md-fab class="fab-button" routerLink="add-product">
+    <i class="material-icons">add</i>
+  </button>
+
+
+
+  <md-toolbar color="accent">
+  <div fxFlex="100" fxLayout="row" fxLayoutAlign="none none" >
+    <div fxFlex="52"><strong>Nome do produto</strong></div>
+    <div fxFlex="20"><strong>Preco</strong></div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="8"><strong>Acoes</strong></div>
+  </div>
+</md-toolbar>
+
+<md-list-item *ngFor="let product of productList | paginate: { itemsPerPage: 10, currentPage: p}">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="1"></div>
+    <div fxFlex="51"> <p>{{product.name}}</p> </div>
+    <div fxFlex="20">R$:{{product.price}},00</div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="4"><button mdTooltip="Visualizar" md-icon-button class="mat-ripple" [routerLink]="['view', product.id]"><i class="material-icons">search</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" md-icon-button class="mat-ripple" [routerLink]="['edit', product.id]"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" md-icon-button (click)="delete(product.id)" class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+  </div>
+  <hr>
+</md-list-item>
+
+<pagination-controls (pageChange)="p = $event"
+  previousLabel=""
+  nextLabel=""
+  class="customTheme"
+  align="center">
+  </pagination-controls>

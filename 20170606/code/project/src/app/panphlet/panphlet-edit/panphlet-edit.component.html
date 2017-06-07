@@ -1,0 +1,50 @@
+<div fxLayout="column" fxLayoutAlign="space-between center" >
+    <div fxFlex="20">
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <div fxFlex="40">
+          <md-input-container style="width: 310px; margin-right: 60px;">
+            <input mdInput #initial placeholder="Dia inicial" value="{{panphlet.initialDate}}">
+          </md-input-container>
+        </div>
+        <div fxFlex="auto"></div>
+        <div fxFlex="40">
+          <md-input-container style="width: 310px; margin-right: 60px;">
+            <input mdInput #end placeholder="Dia final" value="{{panphlet.endDate}}">
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+
+    <div fxFlex="auto">
+      <div style="height: 20px"></div>
+    </div>
+
+    <div fxFlex="20">
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <div fxFlex="40">
+          <md-input-container style="width: 310px; margin-right: 60px;">
+            <input mdInput #url1 placeholder="URL do panfleto 1" value="{{panphletArray[0]}}">
+          </md-input-container>
+        </div>
+        <div fxFlex="auto"></div>
+        <div fxFlex="40">
+          <md-input-container style="width: 310px; margin-right: 60px;">
+            <input mdInput #url2 placeholder="URL do panfleto 2" value="{{panphletArray[1]}}">
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-around none">
+  <div fxFlex="auto"></div>
+  <div fxFlex="8">
+    <button md-button routerLink="/panphlet">Cancelar</button>
+  </div>
+    <div fxFlex="3"></div>
+  <div fxFlex="8">
+    <button md-button (click)="save(panphlet.id, initial.value, end.value, url1.value, url2.value)">Salvar</button>
+  </div>
+    <div fxFlex="auto"></div>
+</div>

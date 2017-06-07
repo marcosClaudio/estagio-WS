@@ -1,0 +1,33 @@
+  <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
+      <md-input-container style="width: 310px">
+        <input mdInput type="url" readonly placeholder="Upload da imagem">
+      </md-input-container>
+
+      <button md-button style="margin-left:20px">
+        Selecione
+      </button>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
+    <div fxFlex="20">
+      <md-input-container>
+        <input mdInput #initial type="date" placeholder="Data inicial">
+      </md-input-container>
+    </div>
+
+    <div fxFLex="20">
+      <md-input-container>
+        <input mdInput #end type="date" placeholder="Data final">
+      </md-input-container>
+    </div>
+  </div>
+
+   <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="/offer">Cancelar</button>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="30">
+    <button md-button (click)="save(id, initial.value + ' - ' + end.value, initial.value, end.value)">Enviar</button>
+    </div>
+  </div>
