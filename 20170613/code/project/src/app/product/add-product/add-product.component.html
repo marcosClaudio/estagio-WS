@@ -1,0 +1,58 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <div fxLayout="row" fxLayoutAlign="none none">
+    <div fxFlex="20">
+      <md-input-container style="width: 310px; margin-right: 120px">
+        <input mdInput type="url" #image placeholder="Url da imagem do produto">
+      </md-input-container>
+    </div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="50">
+      <md-input-container style="width: 310px">
+        <input mdInput type="url" #image2 placeholder="Outra Url da imagem do produto">
+      </md-input-container>
+    </div>
+  </div>
+
+<table align="center">
+  <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #name placeholder="Nome do produto">
+    </md-input-container>
+    </td>
+
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #price placeholder="Preco">
+    </md-input-container>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #mark placeholder="Marca">
+    </md-input-container>
+    </td>
+
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #offer placeholder="Oferta">
+    </md-input-container>
+    </td>
+  </tr>
+</table>
+
+  <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="/product">Cancelar</button>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="30">
+    <button md-button (click)="save(name.value.count, name.value, price.value, image.value, image2.value, mark.value, offer.value)">Enviar</button>
+    </div>
+  </div>
+</div>
+

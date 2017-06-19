@@ -1,0 +1,31 @@
+<button md-fab class="fab-button" routerLink="add-mark">
+    <i class="material-icons">add</i>
+</button>
+
+  <md-toolbar color="accent">
+  <div fxFlex="100" fxLayout="row" fxLayoutAlign="none none" >
+    <div fxFlex="22"><strong>Nome da marca</strong></div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="8"><strong>Acoes</strong></div>
+  </div>
+</md-toolbar>
+
+<md-list-item *ngFor="let mark of markList | paginate: { itemsPerPage: 5, currentPage: p}">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="1"></div>
+    <div fxFlex="52"> <p>{{mark.name}}</p> </div>
+    <div fxFlex="20"></div>
+    <div fxFlex="auto"></div>
+    <div fxFlex="4"><button mdTooltip="Visualizar" md-icon-button [routerLink]="['view', mark.id]" class="mat-ripple"><i class="material-icons">search</i></button></div>
+    <div fxFlex="4"><button mdTooltip="Editar" md-icon-button [routerLink]="['edit', mark.id]" class="mat-ripple"><i class="material-icons">create</i></button> </div>
+    <div fxFlex="4"><button mdTooltip="Remover" (click)="delete(mark.id)" md-icon-button class="mat-ripple"> <i class="material-icons" style="color: darkred">close</i></button></div>
+  </div>
+  <hr>
+</md-list-item>
+
+<pagination-controls (pageChange)="p = $event"
+  previousLabel=""
+  nextLabel=""
+  class="customTheme"
+  align="center">
+  </pagination-controls>

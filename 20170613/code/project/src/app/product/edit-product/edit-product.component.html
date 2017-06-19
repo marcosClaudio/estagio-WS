@@ -1,0 +1,60 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+
+<table align="center">
+  <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #nome placeholder="Nome do produto" value="{{product.name}}">
+    </md-input-container>
+    </td>
+
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #preco placeholder="Preco" value="{{product.price}}">
+    </md-input-container>
+    </td>
+  </tr>
+</table>
+
+  <table align="center">
+  <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #mark placeholder="Marca" value="{{product.markID}}">
+    </md-input-container>
+    </td>
+
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #offer placeholder="Oferta" value="{{product.offerID}}">
+    </md-input-container>
+    </td>
+  </tr>
+</table>
+
+ <div fxLayout="row" fxLayoutAlign="none none" style="margin-right: 120px">
+   <div fxFlex="30">
+    <md-input-container style="width: 310px">
+      <input mdInput type="url" #image1 value="{{productImage[0]}}" placeholder="Upload da imagem do produto">
+    </md-input-container>
+   </div>
+   <div fxFlex="auto"></div>
+    <div fxFlex="40">
+    <md-input-container style="width: 310px">
+      <input mdInput type="url" #image2 value="{{productImage[1]}}" placeholder="Upload da imagem do produto">
+    </md-input-container>
+   </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="/product">Cancelar</button>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="30">
+    <button md-button (click)="save(product.id,nome.value, preco.value, image1.value, image2.value, mark.value, offer.value)">Salvar</button>
+    </div>
+  </div>
+</div>
+
+

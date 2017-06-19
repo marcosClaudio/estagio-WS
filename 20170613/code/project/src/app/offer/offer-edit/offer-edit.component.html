@@ -1,0 +1,48 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+
+<table align="center">
+  <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #name placeholder="Nome da offerta" value="{{offer.name}}" readonly="readonly">
+    </md-input-container>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #initial placeholder="Dia inicial" value="{{offer.initialDate}},00">
+    </md-input-container>
+    </td>
+  </tr>
+
+    <tr>
+    <td>
+      <md-input-container style="width: 310px; margin-right: 60px;">
+      <input mdInput #end placeholder="Dia final" value="{{offer.endDate}},00">
+    </md-input-container>
+    </td>
+  </tr>
+</table>
+
+  <div fxLayout="row" fxLayoutAlign="center canter" style="margin-top: 20px">
+    <md-input-container style="width: 310px">
+      <input mdInput type="url" #image placeholder="Upload da imagem da oferta">
+    </md-input-container>
+
+     <button md-mini-fab style="margin-left:20px">
+        <i class="material-icons">file_upload</i>
+     </button>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-around none">
+    <div fxFlex="20">
+    <button md-button routerLink="/offer">Cancelar</button>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="30">
+    <button md-button (click)="save(offer.id,initial.value + '-' + end.value, initial.value, end.value, image.value)">Salvar</button>
+    </div>
+  </div>
+</div>

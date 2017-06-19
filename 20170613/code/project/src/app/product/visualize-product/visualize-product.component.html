@@ -1,0 +1,20 @@
+<md-toolbar color="accent">
+  <div fxFlex="70"><strong>Nome do produto</strong></div>
+  <div Flex="auto"><strong>Preco</strong></div>
+</md-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="space-around start">
+  <div fxFlex="1"></div>
+  <div fxFlex="auto"><h3>{{product.name}}</h3></div>
+  <div fxFlex="30.5"><h3>{{product.price}},00</h3></div>
+</div>
+  <hr>
+<div fxLayout="row" fxLayoutAlign="space-around start" >
+  <div fxFLex="40"> <img src="{{ProductImage1}}" style="height: 200px; width: auto"> </div>
+  <div fxFlex="auto"></div>
+  <div fxFlex="40"> <img src="{{ProductImage2}}" style="height: 200px; width: auto"> </div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center" >
+  <button md-icon-button routerLink="/product"><i class="material-icons">arrow_back</i></button>
+</div>

@@ -1,0 +1,158 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Gabinete GT Aerocool",
+      "price": 120,
+      "image": [
+        "https://images8.kabum.com.br/produtos/fotos/44328/44328_index_p.jpg",
+        "http://www.mercuryshop.com.br/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/g/t/gt_black_edition_6.jpg"
+      ],
+      "offerID": 1,
+      "markID": 1,
+      "panphletID": 1
+    },
+    {
+      "id": 2,
+      "name": "Gabinete Aerocool GT-S branco",
+      "price": 735,
+      "image": [
+        "https://pichau-media.s3.amazonaws.com/catalog/product/cache/1/thumbnail/440x310/9df78eab33525d08d6e5fb8d27136e95/p/r/produto_detalhe8374.fde479ffa809215bc366fffd230ec9ba.jpg",
+        "https://pichau-media.s3.amazonaws.com/catalog/product/cache/1/thumbnail/440x310/9df78eab33525d08d6e5fb8d27136e95/p/r/produto5910.616b9c230a8e4d765e9d5a68b8e9e3c7.jpg"
+      ],
+      "offerID": 1,
+      "markID": 1,
+      "panphletID": 1
+    },
+    {
+      "id": 4,
+      "name": "Gabinete PCYES TIGER, branco com LED azul",
+      "price": 249,
+      "image": [
+        "https://pichau-media.s3.amazonaws.com/catalog/product/cache/1/thumbnail/440x310/9df78eab33525d08d6e5fb8d27136e95/3/_/3_110.jpg",
+        "https://pichau-media.s3.amazonaws.com/catalog/product/cache/1/thumbnail/440x310/9df78eab33525d08d6e5fb8d27136e95/4/_/4_82.jpg"
+      ],
+      "offerID": 1,
+      "markID": 2,
+      "panphletID": 1
+    },
+    {
+      "id": 5,
+      "name": "Gabinete Aerocool Simples",
+      "price": 50,
+      "image": [
+        "https://pichau-media.s3.amazonaws.com/catalog/product/cache/1/thumbnail/440x310/9df78eab33525d08d6e5fb8d27136e95/p/r/produto_detalhe8374.fde479ffa809215bc366fffd230ec9ba.jpg",
+        "https://pichau-media.s3.amazonaws.com/catalog/product/cache/1/thumbnail/440x310/9df78eab33525d08d6e5fb8d27136e95/p/r/produto5910.616b9c230a8e4d765e9d5a68b8e9e3c7.jpg"
+      ],
+      "offerID": 1,
+      "markID": 2,
+      "panphletID": 1
+    },
+    {
+      "name": "Gabinete AeroCool Gamer AERO-500 Window Preto",
+      "price": "225",
+      "image": "https://images5.kabum.com.br/produtos/fotos/85765/85765_index_gg.jpg",
+      "markID": "1",
+      "offerID": "2",
+      "id": 6
+    }
+  ],
+  "marks": [
+    {
+      "id": 1,
+      "name": "AeroCool",
+      "logo": "http://www.lilireviews.com/wp-content/uploads/2012/03/AeroCool-logo.png"
+    },
+    {
+      "id": 2,
+      "name": "PCYES",
+      "logo": "http://www.hardmatic.com.br/site/wp-content/uploads/2016/03/logo-pcyes-300x300.jpg"
+    },
+    {
+      "name": "Razer",
+      "logo": "https://assets.razerzone.com/eeimages/banners/razer-logo-facebook-og.png",
+      "id": 3
+    },
+    {
+      "name": "Genius",
+      "logo": "http://us.geniusnet.com/assets/img/logo.png",
+      "id": 4
+    }
+  ],
+  "panphlet": [
+    {
+      "id": 1,
+      "initialDate": "12-05-2017",
+      "endDate": "24-05-2017",
+      "panphletUrl": [
+        "http://www.geeral.com.br/img_via2/panfleto_1.jpg",
+        "http://www.geeral.com.br/img_via2/panfleto_2.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "initialDate": "17-06-2017",
+      "endDate": "29-07-2017",
+      "panphletUrl": [
+        "http://www.geeral.com.br/img_via2/panfleto_1.jpg",
+        "http://www.geeral.com.br/img_via2/panfleto_2.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "initialDate": "15-05-2017",
+      "endDate": "24-05-2017",
+      "panphletUrl": [
+        "http://www.geeral.com.br/img_via2/panfleto_1.jpg,http://www.geeral.com.br/img_via2/panfleto_2.jpg",
+        "http://www.geeral.com.br/img_via2/panfleto_1.jpg,http://www.geeral.com.br/img_via2/panfleto_2.jpg"
+      ]
+    },
+    {
+      "initialDate": "12-12-1222",
+      "endDate": "12-12-1333",
+      "panphletUrl": [
+        "aweawe",
+        "wswrwsww"
+      ],
+      "id": 5
+    },
+    {
+      "initialDate": "12-06-2006",
+      "endDate": "20-07-2006",
+      "panphletUrl": [
+        "https://www.google.com",
+        "https://www.youtube.com"
+      ],
+      "id": 6
+    }
+  ],
+  "offer": [
+    {
+      "id": 1,
+      "name": "02-12-2017 - 12-12-2017",
+      "initialDate": "02-12-2017",
+      "endDate": "12-12-2017",
+      "productList": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "14-05-2017 - 19-05-2017",
+      "initialDate": "14-05-2017",
+      "endDate": "19-05-2017",
+      "productList": [
+        3,
+        1
+      ]
+    },
+    {
+      "name": "1992-12-02 - 2003-12-04",
+      "initialDate": "1992-12-02",
+      "endDate": "2003-12-04",
+      "productList": [],
+      "id": 3
+    }
+  ]
+}
